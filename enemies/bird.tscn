@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5ijjn8mn4oga"]
+
+[ext_resource type="Script" path="res://enemies/bird.gd" id="1_cvrd5"]
+[ext_resource type="Texture2D" uid="uid://djj6ackn7yv2v" path="res://assets/Enemies/bird.png" id="1_kfg74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jsx2"]
+atlas = ExtResource("1_kfg74")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t2gk"]
+atlas = ExtResource("1_kfg74")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65xh"]
+atlas = ExtResource("1_kfg74")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6v8o"]
+atlas = ExtResource("1_kfg74")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rgk2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jsx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t2gk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65xh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6v8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="bird" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_cvrd5")
+
+[node name="bird_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5rgk2")
+frame = 3
+frame_progress = 0.304256

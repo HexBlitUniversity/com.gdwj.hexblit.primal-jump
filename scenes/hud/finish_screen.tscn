@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://be8upg4lijekq"]
+
+[node name="finish_screen" type="Node2D"]
